@@ -31,7 +31,9 @@ class CryptoCompare
      */
     public function __construct(string $apiKey, array $options = [], string $endpoint = null)
     {
-        $this->endpoint = $endpoint;
+        if ($endpoint) {
+            $this->endpoint = $endpoint;
+        }
 
         $this->initClient($apiKey);
 
@@ -70,7 +72,7 @@ class CryptoCompare
      */
     public function resolveUrl(string $url)
     {
-        return str_replace('//', '/', $this->endpoint . '/' . $url);
+        return (rtrim($this->endpoint, '/') . '/' . ltrim($url, '/'));
     }
 
     /**
