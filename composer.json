@@ -1,0 +1,26 @@
+{
+    "name": "vdhruv/cryptocompare-api-php",
+    "description": "Laravel implementation of CryptoCompare APIs.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vdhruv",
+            "email": "dhruvinfozen01@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "7.*",
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vdhruv\\CryptoCompare\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
